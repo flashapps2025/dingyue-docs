@@ -5,6 +5,10 @@ export default defineConfig({
   description: 'Dingyue有效帮助运营和相关开发人员分析并增加订阅量，您可以用来维护老用户，拓宽新用户，甚至可以进行App Store广告投放。',
   lang: 'zh-CN',
   base: '/',
+  outDir: '../dist', // 自定义输出目录
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   
   themeConfig: {
     logo: '/logo.svg',
