@@ -451,7 +451,6 @@ async function cancelSubscription(subscriptionId, reason) {
 
 ## 相关资源
 
-- [用户管理 API](/api/users)
 - [事件追踪 API](/api/events)
 - [订阅配置指南](/docs/订阅配置)
 - [iOS 购买验证](/docs/iOS集成/购买验证)

@@ -24,7 +24,6 @@ export default defineConfig({
           text: 'API 参考',
           items: [
             { text: '概览', link: '/api/' },
-            { text: '用户管理 API', link: '/api/users' },
             { text: '订阅管理 API', link: '/api/subscriptions' },
             { text: '事件追踪 API', link: '/api/events' },
             // { text: '远程配置 API', link: '/api/config' },
