@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build && npm run copy-public && npm run add-favicon",
+    "copy-public": "cp -r public/* .vitepress/dist/ 2>/dev/null || true",
+    "add-favicon": "node .vitepress/add-favicon.js",
     "preview": "vitepress preview"
   },
   "devDependencies": {
