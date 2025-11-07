@@ -115,8 +115,8 @@ export default defineConfig({
     ],
     
     footer: {
-      message: 'Powered by VitePress',
-      copyright: 'Copyright © 2024 Dingyue'
+      message: '',
+      copyright: 'Copyright © 2025 Dingyue'
     },
     
     search: {
