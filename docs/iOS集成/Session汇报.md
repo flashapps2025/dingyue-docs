@@ -4,15 +4,31 @@
 
 在 AppDelegate 文件中：
 
+<CodeGroup>
+
+<CodeGroupItem title="swift">
+
 ```swift
 import DingYue_iOS_SDK
 ```
+
+</CodeGroupItem>
+
+<CodeGroupItem title="objective-c">
 
 ```objective-c
 @import DingYue_iOS_SDK;
 ```
 
+</CodeGroupItem>
+
+</CodeGroup>
+
 在 application(_:didFinishLaunchingWithOptions:) 添加session 汇报：
+
+<CodeGroup>
+
+<CodeGroupItem title="swift">
 
 ```swift
 /** - returns: ([String:Any]?,Error?) */
@@ -35,13 +51,17 @@ DYMobileSDK.activate { results, error in
             if let isUseNativePaywall = result["isUseNativePaywall"] as? Bool {
                 // 本地内购页ID（须和内购页包名一致）
                 if let nativePaywallId = result["nativePaywallId"] as? String {
-                    // 使用本地内购页的话，需要工程师提前通过‘loadNativePaywall(paywallFullPath: String,basePath:String)’方法设置本地内购页Path
+                    // 使用本地内购页的话，需要工程师提前通过'loadNativePaywall(paywallFullPath: String,basePath:String)'方法设置本地内购页Path
                 }
             }
         }
     }
 }
 ```
+
+</CodeGroupItem>
+
+<CodeGroupItem title="objective-c">
 
 ```objective-c
 /** - returns: (NSDictionary<NSString *,id> * results, NSError * error) */
@@ -59,9 +79,13 @@ DYMobileSDK.activate { results, error in
             if (isUseNativePaywall == YES) {
                 // 本地内购页ID（须和内购页包名一致）
                 NSString *nativePaywallId = results[@"nativePaywallId"];
-                // 使用本地内购页的话，需要工程师提前通过‘[DYMobileSDK loadNativePaywallWithPaywallFullPath: basePath:]’方法设置本地内购页Path
+                // 使用本地内购页的话，需要工程师提前通过'[DYMobileSDK loadNativePaywallWithPaywallFullPath: basePath:]'方法设置本地内购页Path
             }
         }
     }
 }];
 ```
+
+</CodeGroupItem>
+
+</CodeGroup>
